@@ -6,6 +6,11 @@ class MembershipsController < ApplicationController
         render json: membership, status: :accepted
     end
 
+    def index
+        memberships = Membership.all
+        render json: memberships, status: :ok
+    end
+
     private
 
     def membership_params

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # create memberships
-  resources :memberships, only:[:create]
+  resources :memberships, only:[:create, :index]
 
   # show route/includes all memberships for that client
   # create index/update
