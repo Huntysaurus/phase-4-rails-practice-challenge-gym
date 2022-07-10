@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  # create memberships
+  resources :memberships, only:[:create]
+
+  # show route/includes all memberships for that client
+  # create index/update
+  resources :clients, only:[:index, :create, :show]
+
+  # view one specific gym/delete gym
+  # create index/update
+  resources :gyms
+
 end
