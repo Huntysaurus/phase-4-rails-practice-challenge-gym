@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # show route/includes all memberships for that client
   # create index/update
-  resources :clients, only:[:index, :create, :show]
+  resources :clients, only:[:index, :create, :show, :update]
 
   # view one specific gym/delete gym
   # create index/update
