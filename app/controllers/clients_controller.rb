@@ -1,6 +1,7 @@
 class ClientsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
-
+    # notes
+    
     def index
         clients = Client.all
         render json: clients, status: :ok
